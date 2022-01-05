@@ -1,0 +1,148 @@
+FUNDAMENTOS DE PROGRAMACION
+
+    1. Def. de variables y tipos
+    2. Lógica
+    3. Iteración y control de flujo
+    4. Métodos y est. de datos
+
+
+ROADMAP
+
+    1. Fund. de programación
+    2. Algoritmos y est. datos
+    3. Programación FrontEnd
+    4. Intro Base de datos (MYSQL)
+    5. Programación Backend (API's - REST)
+    6. Deploy de la aplicación en un server (Ubuntu)
+        - DigitalOcean (droplets)
+    
+
+DEF. DE VARIABLES Y TIPOS
+
+    - Variable: Contenedor de información, algo que cambia, contener valor
+        - Variables dinámicas: Cambia el valor en el tiempo de ejecución del código
+        - Constantes: No cambian el valor en tiempo de ejecución
+
+    - Tipos: Numeros, Letras, Arreglos, Verdadero/Falso, Objetos, Función ...
+        - Forma de clasificar los valores de las variables
+
+    - Observación: Dentro de JS el tipado es dinámico
+        -> Variable = "valor" (tipo: string)
+        ...
+        ...
+        -> Variable = 12 (tipo: int)
+
+        Superset: Typescript 
+
+- Todos los scripts de JavaScript van a estar en un archivo HTML que se va a correr en un navegador
+- Estructura basica del HTML
+    
+    <html>
+        <head></head>
+        <body></body>
+    </html>
+
+- Setup de JS dentro del HTML
+    -> Definimos una etiqueta "script"
+    -> Definir una variable
+    -> Ver el output (ver el valor que definimos)
+
+- Referencias de sintaxis: https://www.w3schools.com/js/default.asp
+
+DEF. DE VARIABLES Y TIPOS EN JS
+
+    -> let nombre   = "Alex" // Variable dinamica
+    -> var apellido = "Casadevall" // Variable dinamica
+    -> const edad   = 30 // Constante
+
+Obj: console
+        -> Funcion: log
+        -> console.log(arg1, arg2, ...)
+
+LOGICA
+
+    1. Logica de primer orden
+    2. Dos formas de trabajar la logica de programacion
+        -> Comparaciones algebraicas
+        -> Comparaciones logicas
+    3. Todo deriva en un resultado de verdadero o falso
+
+
+    * Cualquier pregunta se puede derivar a preguntas de verdadero o falso
+
+    EJEMPLO COMP. ALGEBRAICA: Para ingresar a un sito web y permite solo mayores de edad
+        -> Tengo que verificar si es mayor a XY edad
+            -> En el caso que sea mayor lo dejo pasar
+            -> Caso sea menor despliego un error
+        
+    EJEMPLO COMP. LOGICA: Para viajar a Brasil necesito cedula o pasaporte y PCR negativo
+        -> Tengo que verificar si tiene cedula o pasaporte
+        -> Tengo que verificar si tiene PCR negativo
+            -> Variables: isCedula, isPasaporte, pcrNegativo
+                
+                -> isCedula     = true
+                -> isPasaporte  = false
+                -> pcrNegativo  = true
+
+        CONDICIONAL:
+            - cedula o pasaporte
+            - PCR negativo
+        Se tiene que cumplir las dos en simultaneo para que derive en un resultado verdadero
+
+    COND. OR (||): Si por lo menos un valor de la condicional es true entonces toda la condicional es true
+        
+        isCedula || isPasaporte --> true
+
+    COND. AND (&&): Si por lo menos un valor de la condicional es false entonces toda la condicional es false
+
+        pcrNegativo && isPasaporte --> false
+            true         false
+
+        pcrNegativo && isCedula    --> true
+
+
+    CADENA DE COND. OR:
+        cond1 || cond2 || ... condN -> Es true si por lo menos existe un valor de la cadena en true y es false si todos los valores de la cadena son false
+
+    CADENA DE COND. AND:
+        cond1 && cond2 && ... condN -> es false si por lo menos existe un valor de la cadena en false y es true si todos los valores de la cadena son true
+
+    OP. ALGEBRAICOS
+
+        == : Comparo si A y B son iguales sin importar su tipo
+             Si A = 10 y B = '10'
+             Entonces A == B --> true
+        
+        === : Comparo si A y B son inguales en valor y tipo
+              Si A = 10 y B = '10' 
+              Enronces A === B --> false
+              Para que sea true
+              A = 10, B = 10 -> Por que son del mismo tipo number
+        
+        INVERSAS: 
+
+        !=  : Distinto por valor
+        !== : Distinto por valor y tipo
+
+    COMO SE EL TIPO DE UNA VARIABLE?
+
+        -> typeof VARIABLE : determina con un string que tipo de variable es
+        -> Si A = 10 entonces el typeof A es 'number'
+        -> El output del typeof siempre es un string
+
+    NEGACIONES (! / NOT)
+
+        -> Toda variable de tipo booleano se puede negar con un signo de exclamacion al principio
+        -> Si A = true entonces la inversa es !A --> false
+    
+    IF - ELSE
+
+        if(condicional){
+            // Codigo
+        } else {
+            // Codigo 2
+        }
+
+    -> Si la condicional es verdadera se ejecuta el codigo dentro del bloque del IF
+    -> Caso contratrio se ejecuta dentro del codigo del ELSE
+    

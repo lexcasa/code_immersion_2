@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            // Para ingresar al sitio debe ser mayor de edad
+            // Defino mayor de edad como una constante
+            // Verificar el resultado
+            const MAYOR_EDAD = 18
+            let edad = 17
+            let condIngresar = edad >= MAYOR_EDAD // >, >=, <, <=, ==, === 
+            // Si tiene 18 y la cond: edad > MAYOR_EDAD va a ser false por que no incluye los "bordes"
+            console.log("condIngresar: ", condIngresar)
+
+            if(condIngresar){
+                console.log("Usuario puede ingresar")
+            } else {
+                console.log("Error: Usuario no puede ingresar")
+            }
+        </script>
+    </body>
+</html>
