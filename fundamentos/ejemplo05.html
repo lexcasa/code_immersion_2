@@ -1,0 +1,68 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            const mostrarNombre = function (nombre){
+                alert(nombre)
+            }
+
+            const alex = {
+                nombre: "Alex",
+                apellido: "Casadevall"
+            }
+
+            const obtenerApellido = function (persona){
+                return persona.apellido
+            }
+
+            const suma = function (a, b){
+                return a + b
+            }
+
+            let apellido    = obtenerApellido(alex) 
+            let resultado   = suma(1,2)   
+            let resultado2   = suma(1,'2') // 1 + '2' -> '12'
+
+            console.log(apellido, resultado, resultado2)
+
+            const args  = function (){
+                console.log("args: ", arguments)
+            }
+
+            const resta = (a,b) => a - b // (a,b) => a / b si b === 0 ?
+
+            const division = function (a, b){
+                if(b === 0){
+                    return 'Error'
+                } else {
+                    return a / b
+                }
+            }
+
+            const division2 = (a,b) => {
+                if(b === 0){
+                    return 'Error'
+                }
+                return a / b
+            }
+
+            const division3 = (a,b) => b === 0 ? 'Error' : a/b
+
+            const sumaProt = function (a, b){
+                if(typeof a === 'number' && typeof b === 'number'){
+                    return a + b
+                }
+                return 'Error en la suma'
+                // return (typeof a === 'number' && typeof b === 'number') ? a + b : 'Error en la suma'
+            }
+
+            const sumaProt2 = function (a, b){
+                let newA = parseFloat(a)
+                let newB = parseFloat(b)
+                let suma = newA + newB
+                return isNaN(suma) === true ? 'Error en la suma' : suma
+            }
+
+        </script>
+    </body>
+</html>

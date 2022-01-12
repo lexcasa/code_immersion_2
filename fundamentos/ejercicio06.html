@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 
+        const sumatoria = function (arr1, arr2){
+            // Los arrays son iguales en su tamano
+            let sumTotal = 0
+            if(arr1.length === arr2.length){
+                for (let i = 0; i < arr1.length; i++){
+                    sumTotal += (arr1[i] + arr2[i])
+                }
+            }
+            return sumTotal
+        }
+        // arr1: [1,1]
+        // arr2: [1,2]
+        // (1 + 1) + (1 + 2) = 5
+        console.log("sumatoria: ", sumatoria([1,1], [1,2]))
+    </script>
+</body>
+</html>
