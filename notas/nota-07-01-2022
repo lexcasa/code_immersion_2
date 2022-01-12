@@ -1,0 +1,100 @@
+FUNDAMENTOS DE PROGRAMACION
+
+    1. Def. de variables y tipos
+    2. Lógica
+    3. Iteración y control de flujo
+    4. Métodos y est. de datos
+
+
+
+3. ITERACION Y CONTROL DE FLUJO
+
+
+ITERACION:
+
+    Tengo una estructura que puede ser un vector: (1, ..., n) verificar c/u o algunos de sus elementos
+
+    - Encontrar una forma de "recorrer" esa estructura
+        -> Ordenada: De uno en un del principo hasta el fin de la estructura
+        -> Desordenada: Recorro los elementos dado una condicion de step
+
+    ORDENADA: 
+
+        FOR
+            -> indice
+            -> step
+            -> condicion de corte
+        
+    v: (1, ..., 58, ... n)
+    v_pos: (0, ... , n-1)
+    v_length: n -> Cantidad de elementos del vector
+    Elemento en funcion del indice
+    v(i) donde i es el indice del vector (dinamico)
+
+    EJEMPLO: Encontrar la posicion del 58 dentro del array
+
+        v_ejemplo: (1, 2, 3, 58, 15)
+
+        FOR (i = 0; i < v_length; i++){
+            IF ( v(i) == 58 ){
+                POS = i
+            }
+        }
+
+        VUELTAS DEL FOR
+
+        v(i) como i = 0 entonces v(0) = 1
+        v(i) como i = 1 entonces v(1) = 2
+        v(i) como i = 2 entonces v(2) = 3
+        v(i) como i = 3 entonces v(3) = 58
+        v(i) como i = 4 entonces v(4) = 15
+
+        POS donde esta el 58 es i = 3
+
+    EST. OBJETOS
+
+        let persona = {
+            nombre: "Alex",
+            edad: 30
+        }
+    
+    EJEMPLO: Verificar que una persona sea mayor de edad
+
+        -> No conozco el objeto: el input es ciego
+        -> Conozco el objeto y sus propiedades
+
+    Input ciego: 
+        -> No conozco las porp del objeto pero se que el unico valor numerico es la edad
+        -> Como recorro un objeto y sus valores
+
+    FOR IN
+    let edad = 0
+    FOR (let key in persona){
+        -> Todas las key van a ser los nombres de las propiedades
+        -> persona[key] van a ser los valores
+        si persona[key] es un numero (typeof persona[key] == 'number')
+            - Caso correcto almaceno
+            edad = persona[key]
+    }
+
+    Si key es "nombre" entonces persona[key] = "Alex"
+    Si key es "edad" entonces persona[key] = 30
+
+
+    __kyasd123: [-31.12313, -58.123213]
+
+
+    let element = {
+        valor1: 10,
+        valor2: 15,
+        valor3: 34,
+        ...
+    }
+
+    let sum = 0
+    let count = 0
+    FOR (let key in element){
+        sum = sum + element[key]
+        count++
+    }
+    let prom = sum / count 

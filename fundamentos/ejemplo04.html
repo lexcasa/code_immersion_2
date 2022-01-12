@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            let persona = {
+                nombre: "Alex",
+                edad: 30
+            }
+            let edad = 0
+            let isMayor = false
+            const MAYOR_EDAD = 18
+            for (let key in persona){
+                if(typeof persona[key] === 'number'){
+                    edad = persona[key]
+                    if(edad >= MAYOR_EDAD){
+                        isMayor = true
+                    }
+                }
+            }
+            
+            if(persona.edad >= MAYOR_EDAD){
+                isMayor = true
+            }
+
+            console.log("edad: ", edad, " mayor edad: ", isMayor)
+        </script>
+    </body>
+</html>
