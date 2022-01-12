@@ -1,0 +1,105 @@
+4. Métodos y est. de datos
+
+METODOS: 
+    -> Funciones
+        -> De ejecución: procedimientos
+        -> Con retorno
+        -> Autoejecutables / Funcion flecha (arrow function) / lambda function
+
+
+EST. DE DATOS
+
+    -> Arrays
+    -> Objetos
+
+
+
+FUNCIONES DE EJECUCION
+    1. Devuelven un valor indefindo o no almacenable
+    2. Determinan un procedimiento con un resultado visible en el sistema
+
+    const proc = function (){
+        alert("Hola Mundo")
+    }
+
+    const mostrarNombre = function (nombre){
+        alert(nombre)
+    }
+
+    f(x) = x + 1 
+    si x = 1 <-> f(1) = 1 + 1 <-> f(1) = 2 
+
+    mostrarNombre("Alex") = alert("Alex") -> Despliega una accion en pantalla
+
+
+FUNCIONES CON RETORNO
+
+    const obtenerApellido = function (persona){
+        return persona.apellido
+    }
+
+    const suma = function (a, b){
+        return a + b
+    }
+
+    let apellido    = obtenerApellido(persona) -> type string
+    let resultado   = suma(1, 2)    -> type number
+    let resultado2   = suma(1, '2') -> type string
+
+
+LAMBDA FUNCTION
+
+    const resta = (a,b) => a - b
+
+
+---- 
+
+EST. DE DATOS
+
+    -> Array
+        -> Vector o matriz
+        -> Soporta todos los tipos de datos soportados en JavaScript
+            -> Array que contiene objetos
+            -> Array que contiene strings
+            -> Array que contiene number
+            ...
+            -> Array de arrays
+                -> Matriz
+            -> Array mixtos
+            
+        EJEMPLOS: 
+
+            [1,2,3,4, ... ] Array de numeros
+            ['a','bc', ...] Strings
+            [{nombre: "Alex"}, ... ] Objetos
+            [[...], [...], ... ] Array de arrays (Matriz)
+
+        1. Almacenar datos complejos
+        2. Acceder de forma independiente a c/u de sus valores: Ejemplo v[3]
+        3. Acceder de forma dinamica a c/u de sus valores: Ejemplo v[i] donde i es una variable 
+        4. Recorrer sus valores de la forma que quiera
+            -> Puedo recorrer con un FOR
+        
+    -> Objetos
+        -> clave, valor -> propiedad, valor -> {propiedad: "valor"} 
+        -> los valores pueden ser de todos los tipos definidos en JavaScript
+        {prop: 1}
+        {prop: "Alex"}
+        {prop: function (){...}}
+        {prop: {...}}
+        {prop: [...]}
+        ...
+
+        1. Se cumple
+        2.
+            const persona = {nombre: "Alex", apellido: "Casadevall"}
+            persona.nombre -> "Alex"
+            persona.apellido -> "Casadevall"
+        3. 
+            persona[key] donde key es una variable
+            si key es "apellido" -> persona["apellido"] -> "Casadevall"
+
+        4. FOR IN
+            for (let key in persona){
+                persona[key] -> c/propiedad dentro de key 
+            }
