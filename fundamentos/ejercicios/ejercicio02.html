@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        
+        Dado el array de edades del ejercicio anterior. Obtener el promedio de las edades para alumnos mayores a 10 años
+        1. Variables del problema
+            -> edades
+            -> prom
+            -> constante: alumnos_mayores
+            -> countMayores (va a contar los alumnos mayores a la constante)
+        
+        2. Logica
+            -> obtener promedio de las edades
+                -> alumnos mayores a CONSTANTE
+                -> contamos la cantidad de alumnos mayores a CONSTANTE
+                -> el promedio: edades (mayores) / cantidad (mayores)
+
+        3. Presentacion
+            -> alert
+     -->
+     <script>
+         let edades = [10,20,30,21]
+         let prom   = 0
+         let countMayores = 0
+         const ALUMNOS_MAYORES = 10
+
+         for(let i = 0; i < edades.length; i++){
+             if(edades[i] > ALUMNOS_MAYORES){
+                 prom += edades[i]
+                 countMayores++ // cuenta de uno en uno 
+             }
+         }
+
+         prom = prom/countMayores
+
+         alert(prom)
+     </script>
+</body>
+</html>

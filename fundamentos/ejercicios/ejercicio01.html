@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Dado un array de edades [10,20,30,21] obtener el promedio de las mismas y desplegar en pantalla a través de un alert
+        Tres cosas
+
+        1. Que variables definir
+        2. Logica
+        3. Presentacion
+        4. Los casos de test
+        
+     -->
+    <script>
+        let edades = [10,20,30,21]
+        let prom   = 0
+
+        // Promedio: suma de los elementos dividido la cantidad de elementos
+        // suma de los elementos: for de los elementos
+        // cantidad de elementos: el tamanio del vector
+        for (let i = 0; i < edades.length; i++){
+            prom += edades[i] // sumo anterior mas el siguiente
+            // prom = prom + edades[i]
+
+            /// Interacciones del for
+            // i = 0 -> prom (anterior) + edades[0] -> 0 + 10   -> prom (actual): 10
+            // i = 1 -> prom (anterior) + edades[1] -> 10 + 20  -> prom (actual): 30
+            // i = 2 -> prom (anterior) + edades[2] -> 30 + 30  -> prom (actual): 60
+            // i = 3 -> prom (anterior) + edades[3] -> 60 + 21  -> prom (actual): 81
+        }
+
+        // prom: 81
+
+        prom = prom/edades.length // 81/4 -> prom (actual): 20.25
+
+        // presentacion: mostrar como un alert
+        alert(prom)
+    </script>
+</body>
+</html>
