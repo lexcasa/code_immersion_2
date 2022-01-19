@@ -1,0 +1,157 @@
+ALGORITMOS
+
+    -> Conjunto de reglas ordenadas que dado un input resuelve un output deseado
+    -> ALGORITMO: A1
+
+        Input: 1    -> [ A1 ] -> Output: 2
+        ...
+        Input: 56   -> [ A1 ] -> Output: 57
+        ...
+        Input: n    -> [ A1 ] -> Output: n + 1
+
+        Programa A: Input -> [ A1 ] -> Output
+
+        [ A1 ] -> Una funcion (Input, Output)
+
+
+        -> Input: Variables de entrada (pueden ser modificables o no)
+        -> Output: Variable de salida modificable
+        -> A(i) -> Son los algoritmos que procesan los Input/output
+
+        A1: 
+            -> Algoritmo/Formula: Output = Input + 1
+
+            Si input = 1 -> Output = input + 1 -> 1 + 1 -> Output = 2
+
+            Si input = n -> Output = n + 1 -> Output = n + 1
+    
+    -> Funcion Test -> Test(A1, Output) -> True / False dependiendo del output que quiera probar
+
+    CASO: 
+
+        A1: Input + 1
+        Input: 1 
+        Output: 2
+
+        Test(A1, Output) = [ (Input + 1) === Output ] -> [True, False]
+
+ALGORITMOS DE BUSQUEDA
+
+    1. BUSQUEDA LINEAL
+        -> De principio a fin en un array
+        -> Elemento a elemento
+        -> Array que tiene tamanio: 200
+            -> Tiempo que demora en encontrar un elemento
+            -> Mejor caso: 1
+            -> Peor caso: 200
+
+        Array: [1, ..., 153, ..., 200]
+        Si el elemento que quiero encontrar es el "1"
+
+        MEJOR CASO
+            FOR ARRAY
+                -> SI ARRAY[i] === 1
+                ...
+
+                ENCONTRE !! 
+
+                    ARRAY[0] = 1  
+        
+        PEOR CASO
+            FOR ARRAY
+                -> SI ARRAY[i] === 200
+                ...
+
+                ENCONTRE !! 
+
+                    ARRAY[199] = 200 
+
+    * QUE PASA SI EL ELEMENTO ESTA EN LA POSICION: 149
+        -> ARRAY[149] = 150 
+        -> Mejor caso: contar de 0 a 149 y no recorrer mas
+        -> Peor caso: contar de 0 a 149, encontrar el elemento y verificar de 150 a 199
+
+
+        MEJOR CASO
+            FOR ARRAY
+                -> SI ARRAY[i] === 150
+                ...
+
+                ENCONTRE !! 
+
+                    ARRAY[149] = 150
+
+                BREAK;   Se para la ejecucion en la posicion que se encontro el elemento
+
+1. BUSQUEDA CON AGRUPACION
+     - Eliminar los repetidos
+        
+        Input: [1, 1, 2, 2, 3] -> Output: [1, 2, 3]
+   
+    - Obtener solo los repetidos
+
+        Input: [1, 1, 2, 2, 3] -> Output: [1, 2]
+
+2. BUSQUEDA CON CLASIFICACION
+    Input: [1, ture, false, "A"] -> Clasificador: Quiero solo booleanos -> output: [true, false]
+
+    const clasificiador = 'string' 
+
+    typeof input[i] === clasificiador
+        -> output.push( input[i] ) // Agrego el elemento para dentro del array de output
+
+    output: ["A"]
+
+3. BUSQUEDA NORMAL
+
+        -> Comparar ambos lados y verificar que tienen el mismo valor y tipo
+
+        CASO: 
+                a -> es numero
+                b -> es string
+
+       Estrategia: Transformar uno de los dos valores o los dos al mismo tipo
+            - O transformo a en un string
+            - O transformo b en un numero
+
+            a === b (mismo valor y tipo)
+
+EJEMPLOS EJERCICIOS: 
+
+Input: [1, “B”, “C”, true, true, 1] Output: [true, 1, 1]
+    -> Agrupa solo booleanos
+
+
+ [“B”,”B”, 1, 1, 1, 2, 2, 0, null] -> output: [1,0,null]
+ [“B”,”B”, 1, 1, 1, 2, 2, 0, 0, 0, 0 null] -> output: [1,0,null]
+
+CLASIFICACION: 
+
+Input: [1,2,”B”,”C”,”B”] Output: w: [1,2], z: [“B”,”B”,”C”]
+
+
+ALGORITMO LOCAL: 
+
+    FOR Input
+        -> Verificamos si Input[i] es string
+            -> Agrego el input[i] dentro de z
+
+        -> Verificamos si Input[i] es number
+            -> Agrego el input[i] dentro de w
+
+
+ALGORITMO GENERAL: 
+
+    FOR Input
+        -> Verificamos si Input[i] es T_TYPE donde T_TYPE son todos los tipos de datos posibles dentro de JS
+            -> Estructura de datos dode sus claves van a ser los tipos de datos posibles
+
+            EJEMPLO: 
+                {
+                    'string': ["A","B", ...],
+                    'boolean': [true, false, true ...]
+                    'number': [1, 2, ...],
+                    ...
+                }
+                
+REF: ARRAYS https://www.w3schools.com/jsref/jsref_obj_array.asp

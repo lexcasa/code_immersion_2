@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Dado un input que me despliegue la posicion encontrada en el array
+        let arr     = [1, 2, 3, 50, 200, 30, 8]
+        let input   = 1
+        let output  = 0
+
+        // Input: 1     -> [ A2 ] -> 0
+        // Input: 50    -> [ A2 ] -> 3
+        // Input: 30    -> [ A2 ] -> 5
+        // ... 
+
+        for (let i = 0; i < arr.length; i++){
+            console.log("veces recorrido: ", i)
+            if(arr[i] === input){
+                output = i // El output es igual a la posicion que encontro el elemento
+                break;
+            }
+        }
+
+        console.log("Output: ", output)
+
+    </script>
+</body>
+</html>

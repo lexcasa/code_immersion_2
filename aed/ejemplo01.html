@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // A1: Input + 1
+        let input   = 1
+        let output  = 0
+
+        const a1 = function (entry){
+            return entry + 1
+        }
+        // Evaluamos el algoritmo y almacenamos el resultado
+        // Dentro de output
+        output = a1(input)
+
+
+        const Test = function (algoritmo, esperado){
+            return algoritmo === esperado
+        }
+
+        let entradas = [5, 10, 3, 2]
+        let salidas  = [6, 11, 4, 3]
+
+        // Mostramos el resultado
+        console.log("Resultado a1: ", output)
+        
+        for (let i = 0; i < entradas.length; i++){
+            // a1(entradas[i]) -> Si i = 0 -> a1(entradas[0]) -> entradas[0] = 5
+            // a1(5) -> 5 + 1 -> a1(5) = 6 ----> a1(5) === 6 ---> 6 === 6 ? True
+            console.log("Test casos:", " Entrada: ", entradas[i], " Salida: ", salidas[i], Test(a1(entradas[i]), salidas[i]) )
+        }
+        
+    </script>
+</body>
+</html>

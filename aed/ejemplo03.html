@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Como verifico elementos repetidos dentro de un array
+        const input = [1, 2, 3, "A", "A", "B", 2, 2]
+
+        // Tengo repetido: 2, A
+        // Cuantas veces tengo repetido: 2 : 3
+        // Cuantas veces tengo repetido: A : 2
+        // v: [1, 2, 3, "A", "A", "B", 2, 2] -> Verifico -> w: [1, 2, 3, "A", "A", "B", 2, 2]
+        // v(0) esta dentro de w? -> Si - 1 vez
+        // v(1) esta detro de w? -> Si  - 3 veces
+        // v(3) esta detro de w? -> Si  - 2 veces
+        // v(4) esta detro de w? -> Si  - 2 veces
+        // .. 
+        // v(6) esta detro de w? -> Si  - 3 veces
+
+        // [1, 2, 3, "A", "A", "B", 2, 2] -> [2,2,2,"A","A"]
+        // A1:
+        // Si al elemento lo encuentro mas de 1 vez 
+        // Entonces lo agrego dentro del array
+        // 
+        // 
+        // FOR ANIDADO: 
+        // FOR i = 0; N 
+        //     v(i)
+        //      FOR j = 0; N
+        //          v(i) === v(j)
+        //              -> Lo agrego al array
+        let aux = []
+
+        for(let i = 0; i < input.length; i++){
+            let count = 0
+            for(let j = 0; j < input.length; j++){
+                // Si encuentro el elemento dentro del array
+                if(input[i] === input[j]){
+                    count++
+                }
+            }
+            // Verificar que el elemento es mayor a 1
+            // Y agrego para dentro del array
+            if(count > 1){
+                // Push es una propiedad del array
+                // Que agrego los elementos al final de la lista
+                // Antes de agregar dentro del array
+                // Es verificar si el array "aux" ya contiene el elemento input[i]
+                // Si tiene no lo agrego
+                // aux.includes(input[i]) -> Quiere decir que esta incluido en el array
+                // aux.includes(input[i]) -> true / false
+                // La negativa: !aux.includes(input[i])
+                
+                if(!aux.includes(input[i])){ // Si no esta incluido o dentro del array
+                    aux.push( input[i] )
+                }
+            }
+            console.log("Cuantas veces encuntro: ", input[i], " dentro del array: ", count)
+        }
+        console.log("Array resultante: ", aux)
+    </script>
+</body>
+</html>
