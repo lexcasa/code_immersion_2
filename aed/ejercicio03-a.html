@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = ["Aba","AAb","b","B"]
+        const flag  = "a"
+        let output = []
+
+        for (let i = 0; i < input.length; i++){
+            if(input[i].toUpperCase().includes( flag.toUpperCase() )){
+                output.push(input[i])
+            }
+        }
+        console.log(output)
+    </script>
+</body>
+</html>

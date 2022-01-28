@@ -76,9 +76,93 @@ ALGORITMO DE CLASIFICACION
 
         END
     
+    -----
 
     EJERCICIOS DEBERES: 
 
         1.b
         2.a (completo)
 
+
+BUSQUEDA NORMAL
+
+    -> Desarrollar un algoritmo de búsqueda normal para los siguientes arrays
+        Input: [“Aba”,”AAb”,”b”,”B”] Output: [“Aba”,”AAb”]
+        -> Encontrar el flag y comparador correcto para dado Output
+
+        Tengo que comparar dos elementos del mismo valor y tipo
+
+            -> Uno de los elementos va a ser input[i]
+            -> El otro va a ser el flag
+
+            -> Busqueda: input[i] <comparador> flag
+
+            <comparador> : === Quiero verificar que sean elementos identicos
+            <comparador> : .includes(...) Quiero verificar que el flag esta incluido en el input
+
+        ---
+
+        const input = ["Aba","AAb","b","B"] 
+        output = [“Aba”,”AAb”]
+
+        CASO 1
+
+        flag = "a" / String
+        comparador: === 
+
+        FOR i = 0 -> input.length
+
+            IF ( flag === input[i] )
+
+                output.push(input[i])
+
+        SI i = 0 
+
+            ES flag === input[0]
+            NO ES
+            output []
+        -- 
+
+
+        KEY SENSITIVE
+            -> Hace diferencia de valor entre mayusculas y minusculas
+            -> Vamos a eliminar esa diferencia transformando todo en mayuscula o minusculas
+        
+
+         FOR i = 0 -> input.length
+
+            IF ( flag.toUpperCase() === input[i].toUpperCase() ) // Se estaria comparando todo en mayuscula
+
+                output.push(input[i])
+
+             SI i = 0 
+
+                ES flag === input[0] // "A" === "ABA"
+                NO ES
+                output []
+            -- 
+        
+        Vamos a utilizar el comparador includes
+
+         SI i = 0 
+
+                ES input[0].include(flag)  // Si "A" esta incluido "ABA"
+                SI ES CIERTO
+                output ["ABA"]
+            -- 
+        
+        SI i = 1
+
+                ES input[1].include(flag)  // Si "A" esta incluido "AAB"
+                SI ES 
+                output ["Aba", "AAb"]
+            -- 
+
+        SI i = 2, 3
+
+                output ["Aba", "AAb"]
+
+
+    Input: [1,”2”,”0”,”1b”,”1”] Output: [1,”1b”,”1”]
+        
+        Encontrar el flag y comparador correcto para dado Output
