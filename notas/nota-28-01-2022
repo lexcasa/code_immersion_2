@@ -1,0 +1,84 @@
+ALGORITMO DE CLASIFICACION
+
+    -> Vamos a clasficiar dado un array por sus tipos
+
+    -> Si tengo un array: [1, 2, true, "A", "B"]
+    -> tipos: 
+        - number
+        - boolean
+        - string
+
+    -> Input: [1,2,"B","C","B"] Output: w: [1,2], z: [“B”,”B”,”C”]
+
+    A1: 
+
+        1. Recorrer el Input
+        2. Verificar cada elemento por el tipo de dato evidente
+        3. Luego clasfico y agrego a la estructura w o z
+
+            -> w es el array donde todos los elementos son number
+            -> z es el array donde todos los elementos son string
+
+        ---
+
+        PSEUDO CODIGO
+
+
+        FOR i = 0 -> Input.length
+
+            IF TYPEOF Input[i] === 'number'
+
+                w.push( Input[i] )
+
+            ELSE IF TYPEOF Input[i] === 'string'
+                
+                z.push( Input[i] )
+        END
+
+
+        Por que terminamos con un ELSE IF y no un ELSE?
+
+    EJERCICIO D: 
+        
+        Input: v: [1,true,”B”,”C”] w: [“string”,”number”] output: z: [1,”B”,”C”]
+        Generar el output clasificando con los tipos encontrados en w.
+
+
+        1. Recorro Input
+        2. Veirifico si es string agrego el Input[i] en z o si es number agrego el Input[i] en z
+
+
+        FOR i = 0 -> Input.length
+
+            IF TYPEOF Input[i] === 'number'
+
+                z.push( Input[i] )
+
+            ELSE IF TYPEOF Input[i] === 'string'
+                
+                z.push( Input[i] )
+        END
+
+        Problema: Tenemos que saber si el TYPEOF Input[i] esta dentro del array w
+        - Para saber si un string esta dentro de w
+            w.includes(variable) -> Verificamos que la variable este dentro de w
+        
+        - w.includes( TYPEOF Input[i] )
+            -> w.includes('string')
+            -> w.includes('number')
+            ...
+        
+        FOR i = 0 -> Input.length
+
+            IF w.includes(TYPEOF Input[i])
+
+                z.push( Input[i] )
+
+        END
+    
+
+    EJERCICIOS DEBERES: 
+
+        1.b
+        2.a (completo)
+

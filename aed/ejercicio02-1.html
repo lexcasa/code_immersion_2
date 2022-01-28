@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = [1,2,"B","C","B"]
+        let z = []
+        let w = []
+
+        for (let i = 0; i < input.length; i++){
+            if(typeof input[i] === 'number'){
+                w.push( input[i] )
+            } else if (typeof input[i] === 'string'){
+                z.push( input[i] )
+            }
+        }
+
+        console.log(w, z)
+    </script>
+</body>
+</html>

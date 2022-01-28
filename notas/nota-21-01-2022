@@ -1,0 +1,124 @@
+ALGORITMOS
+
+    -> Conjunto de reglas ordenadas que dado un input resuelve un output deseado
+    -> ALGORITMO: A1
+
+        Input: 1    -> [ A1 ] -> Output: 2
+        Input: 2    -> [ A1 ] -> Output: 3
+        ...
+        Input: 10    -> [ A1 ] -> Output: 11
+        ...
+        Input: 56   -> [ A1 ] -> Output: 57
+        ...
+        Input: n    -> [ A1 ] -> Output: n+1
+
+
+    A1: let a1 = funcion (i) { return i + 1 }
+
+    PROBLEMA: 
+
+    Input: [1, 2, 3, “A”, “A”, “B”, 2, 2] Output: [2, “A”]
+
+    A2:
+        -> Recorro los elementos del array
+        -> Saco los repetidos: [2,“A”, “A”, 2, 2]
+        -> Luego los compacto: [2, “A”]
+
+    -> Programacion
+
+        -> FOR del Input
+            -> Contar los elementos repetidos
+            -> A los elementos repetidos lo agrego a un array nuevo: w
+            -> Si el elemento es repetido que no este en el array del output
+
+
+    Para verificar si tengo elementos repetidos en el input
+        -> Verifico Input x Input
+
+        v: [1, 2, 3, "A", "A", "B", 2, 2], w: [1, 2, 3, "A", "A", "B", 2, 2]
+
+        v(0) x w 
+        v(1) x w 
+        v(2) x w 
+        ...
+
+        v   -> w j: de 0 a 7
+i:0     1   -> [1, 2, 3, "A", "A", "B", 2, 2]
+i:1     2   -> [1, 2, 3, "A", "A", "B", 2, 2]
+        3   -> [1, 2, 3, "A", "A", "B", 2, 2]
+        "A" -> [1, 2, 3, "A", "A", "B", 2, 2]
+        "A" -> [1, 2, 3, "A", "A", "B", 2, 2]
+        "B" -> [1, 2, 3, "A", "A", "B", 2, 2]
+        2   -> [1, 2, 3, "A", "A", "B", 2, 2]
+        2   -> [1, 2, 3, "A", "A", "B", 2, 2]
+
+        Dentro de v voy a variar i
+            En cada interraccion de i: Dentro de w voy a variar j
+
+        ARRAY_AUX = []
+
+        Cuando i = 0 -> v(0)
+
+        Contador: Cuento cuantas veces encuentro el elemento
+        Contador = 0
+
+                Cuando j = 0
+                    SI v(0) == w(0)
+                
+                Cuando j = 1
+                    SI v(0) == w(1)
+                    Contador++
+                ...
+                Cuando j = 7
+                    SI v(0) == w(7)
+
+            Cuantas veces v(0) esta dentro de w?
+            Contador = 1
+
+            El elemento es repetido si aparece mas de una vez dentro de w
+            SI Contador > 1
+                ARRAY_AUX.push( v(0) )
+
+            ARRAY_AUX Es vacio ? -> SI
+        
+        Cuando i = 1 -> v(1)
+                Cuando j = 0
+                    SI v(1) == w(0)
+                
+                Cuando j = 1
+                    SI v(1) == w(1)
+                ...
+                Cuando j = 7
+                    SI v(1) == w(7)
+            
+            Cuantas veces v(1) esta dentro de w?
+            Contador = 3
+
+            El elemento es repetido si aparece mas de una vez dentro de w
+            SI Contador > 1
+                ARRAY_AUX.push( v(1) )
+
+            ARRAY_AUX Es vacio ? -> NO
+        
+        FOR i = 0 -> 7
+            FOR j = 0 -> 7
+    
+    FORMA ABS.
+    ->  v = w = input
+    Cuando i = 0; i < input.length -> input(i)
+
+        Contador: Cuento cuantas veces encuentro el elemento
+        Contador = 0
+
+                Cuando j = 0; j < input.length -> input(j)
+                    SI input(i) == input(j)
+                        Contador++
+
+            Cuantas veces input(i) esta dentro de w?
+            Contador = n
+
+            El elemento es repetido si aparece mas de una vez dentro de w
+            SI Contador > 1
+                ARRAY_AUX.push( input(i) )
+
+            Ver: ARRAY_AUX

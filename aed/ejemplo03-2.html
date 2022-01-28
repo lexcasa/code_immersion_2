@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = [1, 2, 3, "A", "A", "B", 2, 2] // v y w son el mismo input
+        let arrAux  = []
+        let output  = []
+        for (let i = 0; i < input.length; i++){
+            let contador = 0
+            for (let j = 0; j < input.length; j++){
+                if(input[i] === input[j]){
+                    contador++
+                }
+            }
+            if(contador > 1){
+                arrAux.push( input[i] )
+
+                // Verificamos si el elemento NO EXISTE en el array
+                // Si NO existe agrego
+                // Si existe no hago nada
+
+                if(!output.includes(input[i])){
+                    output.push(input[i])
+                }
+            }
+        }
+        console.log("arrAux: ", arrAux)
+        console.log("output: ", output)
+    </script>
+</body>
+</html>
