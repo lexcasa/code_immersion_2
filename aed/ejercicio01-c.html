@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = ["B","B", 1, 1, 1, 2, 2, 0, null]
+        let output  = []
+        for (let i =0; i < input.length; i++){
+            let count = 0
+            // typeof input[i] === 'number' || input[i] === null
+            if( !isNaN( parseFloat(input[i]) ) || input[i] === null ){
+                for (let j = 0; j < input.length; j++){
+                    if(input[i] === input[j]){
+                        count++
+                    }
+                }
+                let cond1 = count > 2 || input[i] === 0 || input[i] === null
+                let cond2 = !output.includes(input[i])
+                
+                if(cond1 && cond2){
+                    output.push(input[i])
+                }
+            }
+        }
+        console.log(output)
+    </script>
+</body>
+</html>

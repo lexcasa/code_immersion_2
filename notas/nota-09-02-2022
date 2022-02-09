@@ -1,0 +1,94 @@
+BUSQUEDA LINEAL
+
+    -> Agrupacion
+    -> Clasificacion
+    -> Normal
+
+
+Agrupacion
+
+    -> Input -> [ Algoritmo ] -> Output donde el Output <= Input
+
+    EJEMPLO: Agrupar elementos repetidos
+
+        -> Input: [1,1,2,2] -> A1 -> Output: [1,2]
+
+        A1: 
+            -> Contar los elementos del input (que es un array)
+            -> Si el elemento es mayor que 1
+            -> Y que no exista previamente en el output
+            -> Entonces agrego ese elemento a un array nuevo (output)
+        
+        PROB: 
+            -> Como cuento los elementos?
+                -> Ejemplo: Cuantas veces tengo el numero 1 dentro del Input
+                -> Tengo 2 veces
+                
+                PROC:
+                    -> Verificar: si el elemento del Input esta dentro del input
+
+                    Input[0] ---> verifico Input [0 ..., Input.length - 1]
+                    Input[1] ---> verifico Input [0 ..., Input.length - 1]
+
+                    Obs: Input.length - 1 -> Es el ultimo elemento del array
+                        -> Si size del Input es N
+                        -> Entonces la ultima posicion del elemento N-1
+                        -> Por que los indices del array arrancan en 0
+
+                    EJEMPLO: Input: [1,2,2]
+
+        PSEUDO CODIGO
+
+                    FOR i = 0 -> Input.length
+                        COUNT = 0
+                        
+                        FOR j = 0 -> Input.length
+                            IF (Input[i] === Input[j])
+                                COUNT++
+                            --
+                        --
+                    SI COUNT > 1 AND !Output.includes( Input[i] )
+                        Output.push( Input[i] )
+        ----
+
+        Obs: !Output.includes( Input[i] ) -> Que no este incluido en el Output
+
+        Input: [3,1,1,2,2] -> A1 -> Output: [1,1,2,2]
+
+
+    EJERCICIO: Input: ["B","B", 1, 1, 1, 2, 2, 0] Output: [1, 0]
+
+        1. Agrupa solo números que tengan una cantidad mayor a dos
+        2. Agrupa valores nulos y/o 0
+
+        A2: 
+            PROB. 
+                -> Solo numeros
+                -> elemento (numero) > 2
+                -> Si encuentro un valor nulo y/o 0 lo agrupo
+
+            -> Solo numeros
+                let numNuevo = parseFloat(elemento)
+                -> Si el elemento no es un numero, el resultado va a ser NaN (not a number)
+                -> Utilizamos la funcion: isNaN para verificar si el resultado del parse es NaN o no
+                -> SI !isNaN(numNuevo)
+                    -> SIGO
+
+        
+        PSEUDO CODIGO: 
+
+            FOR i=0 -> Input.length
+                COUNT=0
+
+                IF ( !isNaN( parseFloat(Input[i]) ))
+                    FOR j=0 -> Input.length
+                        IF( Input[i] === Input[j] )
+                            COUNT++
+                    ---
+
+                    SI (COUNT > 2 OR Input[i] === 0) AND !Output.includes(Input[i])
+                        Output.push(Input[i])
+                    ---
+            ---
+
+            Output: [1,0]
