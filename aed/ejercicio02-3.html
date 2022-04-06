@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr     = [0, 1, 2, 3, 4]
+        let arr2    = [0, 1]
+        const fxyz  = function (x, y, z){
+            const cond1 = x !== 0 && arr.includes(x) && z !== arr[ arr.length - 1]
+            const cond2 = arr2.includes(z) && z !== 1
+
+            if(cond1){
+                return x + y
+            } else if (cond2){
+                return z + 1
+            } else {
+                return 1/2
+            }
+        }
+        console.log("cond1",    fxyz(2, 2, 3))
+        console.log("cond2",    fxyz(0, 2, 0))
+        console.log("else",     fxyz(0, 2, 1))
+    </script>
+</body>
+</html>

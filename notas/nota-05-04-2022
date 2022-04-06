@@ -1,0 +1,35 @@
+EJERCICIO 02
+
+    -> f(x,y,z) = x + y 
+
+    const fxyz = function (x, y, z){
+
+        Condicional 1: x pertenece (0, n] and z != n
+        Condicional 2: si z pertenece [0, 1)
+
+        IF (Condicional 1)
+            -> return x + y
+
+        ELSE IF (Condicional 2)
+            -> return z + 1
+        
+        ELSE 
+            -> return 1/2
+    }
+
+    (0, n] es un array
+        -> let arr = [0, 1, 2, 3, 4]
+    n: es el ultimo elemento del arr
+
+    arr2: [0, 1]
+
+    Condicional 1: 
+        -> Ejemplo: [0, 1, 2, 3, 4].includes(x)
+        -> n = arr[ arr.length - 1 ] si z !== arr[ arr.length - 1]
+        -> COND1: x !== 0 && arr.includes(x) && z !== arr[ arr.length - 1]
+
+    Condicional 2: 
+        -> arr2.includes(z) && z !== 1
+    
+    
+
