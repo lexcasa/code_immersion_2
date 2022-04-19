@@ -1,0 +1,19 @@
+@media all {
+    input {
+        margin-bottom: 1rem;
+    }
+    .btn-primary {
+        margin-top: 2rem;
+    }
+    .btn-secondary {
+        background-color: #eee;
+        color: #333;
+        font-weight: bold;
+    }
+    p {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #ccc;
+    }
+}
