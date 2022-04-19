@@ -31,5 +31,69 @@ EJERCICIO 02
     Condicional 2: 
         -> arr2.includes(z) && z !== 1
     
-    
+---------
 
+
+    FUND. HTML Y CSS
+
+    HTML: Hypertext markup lang
+
+        -> Computadoras en red
+        -> Trasmitir info de forma rapida
+        -> Lang para soportar los documentos que queremos compartir
+
+    Protocolo HTTP: Hypertext transfer protocol
+
+
+    HTML: documento con ext. html
+
+    Est:
+        <html>
+            <head>
+                ...
+            </head>
+            <body>
+                ...
+            </body>
+        </html>
+
+
+    Sintaxis: 
+        Apertura: <etiqueta> 
+        Cierre: </etiqueta>
+    
+    Dos tipos de etiquetas: 
+
+        -> Estructura
+            -> p: parrafo -> <p></p>
+            -> div: bloque de Estructura -> <div></div>
+            -> article: bloque
+            -> h1, h2, h3 ...
+            -> ...
+
+        -> Lectura/Escritura (I/O)
+            -> Lectura: 
+                -> img: <img src="" ...>
+                -> link: van en el head
+                -> meta: en el head
+            
+            -> Escritura:  
+                -> input: <input type="text" ...>
+                -> textarea: <textarea></textarea>
+    
+    EJEMPLO: 
+
+        -> Formulario de login
+
+            -> titulo de la aplicacion
+            -> campo de email / usuario
+            -> campo de clave
+            -> accion: boton ingresar
+
+
+    Todos los inputs tienen un tipo: 
+        -> type: text
+        -> type: number
+        -> type: email
+        -> type: password
+        ...
