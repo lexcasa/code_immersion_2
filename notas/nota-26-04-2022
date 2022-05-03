@@ -1,0 +1,67 @@
+ROADMAP: 
+
+    -> Formulario similar al login de paypal
+        -> Integrar bootstrap
+    -> Validar que se pueda loguear el usuario: 
+        -> alex@gmail.com
+        -> 123456
+    -> Si el usuario es correcto
+        -> Alerta de success
+    -> Si el usuario es incorrecto que despliegue un error
+
+
+
+    Como el HTML se conecta con el JS?
+
+
+    -> Si, a traves del obj: document -> DOM: document obj model
+
+
+    HTML <---> Eventos <---> JS
+
+    Eventos: 
+        -> Click
+        -> Hover
+        -> drag
+        -> onload
+        -> scroll
+        -> ...
+
+    JS como manipular el HTML desde la consola
+
+        -> A traves del document tenemos funciones
+            -> querySelector
+            -> querySelectorAll
+
+    EJEMPLO: Quiero cambiar el texto de la etiqueta "a" por mi nombre: "Alex"
+
+        -> document.querySelector('a')              # nombre del tag
+        -> document.querySelector('#support')       # id del tag
+        -> document.querySelector('.loginSupport')  # clase del tag
+
+        Como obtengo el texto: 
+
+            -> document.querySelector('a').innerText # texto interno
+            -> let texto = document.querySelector('a').innerText # almaceno el valor del texto de la etiqueta en una variable
+        
+        Como asigno el texto: 
+
+            -> document.querySelector('a').innerText = "Alex"
+
+        # Documentacion: https://www.w3schools.com/jsref/met_document_queryselector.asp
+
+        Para obtener el valor de los inputs siempre sera: 
+
+        # Ejemplo: 
+        document.querySelector('#email').value
+
+    MAPA DE UNA APP A DESARROLLAR: 
+
+        1. VIEW (HTML/CSS)
+        2. LOGICA
+        3. INTEGRACION
+
+    Una vez que generamos un flujo
+        -> Como redirecciono de A --> B
+
+    JS tiene acceso a la navegacion del navegador?

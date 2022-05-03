@@ -1,0 +1,13 @@
+@media all {
+    .logo {
+        width: 12rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .form-control {
+        margin-bottom: 1rem;
+    }
+    .btn-primary {
+        margin-bottom: 1rem;
+    }
+}
