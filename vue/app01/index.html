@@ -12,9 +12,28 @@
 </head>
 <body>
     <div id="app">
-        <p>{{mensaje}}</p>
-        <p>{{nombre}}</p>
-        <p>{{persona.edad}}</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 text-center">
+                    <img class="logo" src="https://logodownload.org/wp-content/uploads/2014/10/paypal-logo.png">
+                    <form action="">
+                        <input type="email" placeholder="Email" class="form-control" id="email" v-model="form.email">
+                        <input type="password" placeholder="Password" class="form-control" id="password" v-model="form.password">
+                        <button type="button" class="btn btn-primary col-12">
+                            {{elements.buttons.logIn}}
+                        </button>
+                        <br>
+                        <a href="#" id="support" class="loginSupport">{{elements.buttons.loginSupport}}</a>
+                        <hr>
+                        <button type="button" class="btn btn-secondary col-12">
+                            {{elements.buttons.signUp}}
+                        </button>
+                    </form>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

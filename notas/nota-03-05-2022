@@ -30,3 +30,17 @@ Roadmap
             -> Luego del setup vamos agregar una etiqueta <p> dentro del div (id="app")
             -> Agregamos: {{mensaje}}
                 -> Al handlebars lo va a sustituir por el valor de la propiedad definida en el data
+        
+        PREGUNTAR: 
+            -> Como obtener datos de un input?
+                -> Directiva: v-model="nombreVariable" --> dentro del input como un attr nuevo
+            -> Como enviar datos del JS al HTML (HTML ---> JS)
+                -> Utilizo los handlebars {{nombreVariable}}
+
+            EJEMPLO: 
+                -> Si quiero enviar datos del JS al HTML
+                    -> handlebars: {{nombreVariable}}
+            
+            JS ----> {{handlebars}} ----> HTML
+
+            HTML ---> Directiva (v-model) ---> JS 
