@@ -41,6 +41,25 @@ Roadmap
                 -> Si quiero enviar datos del JS al HTML
                     -> handlebars: {{nombreVariable}}
             
-            JS ----> {{handlebars}} ----> HTML
+            JS ----> {{handlebars: variables que estan definidas en el objeto data}} ----> HTML
 
-            HTML ---> Directiva (v-model) ---> JS 
+            HTML ---> Directiva (Ejemplo: v-model envia a la variable definida en el obj data) ---> JS 
+
+        Est. basica de una instancia de Vue
+
+        const app = new Vue({
+            el: '#app',
+            data: {...},
+            methods: {...},
+            mounted: function (){...}
+        })
+
+        1. VISTA
+        2. LOGICA
+        3. INTEGRACION: Llamo los eventos y funciones
+
+    EJERCICIO RAPIDO #2: 
+        1. Agregar un input mas al formulario nombre
+        2. Validar en la funcion: validarUsuario que el nombre sea: "alex"
+        3. Agregar una funcion en los methods que al dar clic en "sign up" me dispare un alerta
+            -> "Sign up en construccion"
