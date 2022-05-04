@@ -1,0 +1,32 @@
+Roadmap
+
+    -> VUE: 
+        -> App estatica - Como se reutiliza Bootstrap y logica del JS
+        -> Integrar con una API
+            -> Concepto CrudCrud
+
+
+    App estatica: 
+        -> https://es.vuejs.org/v2/guide/index.html
+
+        HTML <-----> JS
+
+        Vue: Framework - Conjunto de herramientas para producir codigo
+
+        ETAPAS:
+
+            1. Setup
+            2. App minima
+                -> Ejemplo: Mostrar: "Hola mundo!"
+        
+        1. SETUP: 
+            -> Agregamos un script con la CDN de Vue2 antes del script donde esta el app.js
+            -> Dentro del archivo app.js vamos a instanciar el Vue
+                    -> const app = new Vue({...})
+            -> Dentro del HTML creamos un div con id="app"
+            -> La instancia de Vue y HTML se relacionan en la propiedad: {el: '#app', ...}
+        
+        2. App minima
+            -> Luego del setup vamos agregar una etiqueta <p> dentro del div (id="app")
+            -> Agregamos: {{mensaje}}
+                -> Al handlebars lo va a sustituir por el valor de la propiedad definida en el data
