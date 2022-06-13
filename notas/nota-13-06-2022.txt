@@ -1,0 +1,69 @@
+Fund. CRUD
+    -> Crud: Op. Create, Read, Update, Delete
+    -> EJEMPLO:
+        -> Sistema que queremos administrar personas
+            -> personas: [nombre, documento]
+                -> Listado de personas
+                -> Crear una persona
+                -> Actualizar una persona
+                -> Eliminar persona
+        CRUD: 
+            -> Create : Crear una persona
+            -> Read   : Listado de personas
+            -> Update : Actualizar una persona
+            -> Delete : Eliminar persona
+
+        -> API
+            -> CRUD // HTTP
+                -> Create : POST
+                -> Read   : GET
+                -> Update : PUT
+                -> Delete : DELETE
+        
+        -> APP Crud
+            -> HTTP Client
+                -> Vamos a la carpeta de nuestra app
+                    -> donde esta el index.html
+                -> Corremos:
+                    -> http-server -p 8080 -c-1 (instalacion: npm i -g http-server)
+                    -> http://localhost:8080
+
+            
+        SISTEMA: 
+            -> Crear persona
+                -> Create : POST
+                    -> url de la API
+                    -> Obj JSON
+                        -> Payload 
+                            {
+                                "nombre":"Alex",
+                                "documento":"123213"
+                            }
+
+            1. Incluir CDN Axios
+            2. Crear persona
+                -> Creamos la funcion guardar
+                    -> axios.post(url, obj)
+                        -> success
+                            -> recarga la tabla de personas
+            3. Tabla de personas
+                -> Creamos la funcion obtenerPersonas
+                    -> axios.get(url)
+                        -> success
+                            -> obtener los datos de personas
+                            -> en la API
+        
+
+        EJERCICIOS: 
+
+            1. Crear un Crud
+                -> Create, Read de USUARIOS
+                    -> Usuario: [nombre, email, edad]
+
+            2. Crear un Crud
+                -> Create, Read de PRODUCTOS
+                    -> Productos: [nombre, categoria, precio, cantidad]
+            
+            2. Crear un Crud
+                -> Create, Read de Categorias
+                    -> Categorias: [nombre, puntaje]
