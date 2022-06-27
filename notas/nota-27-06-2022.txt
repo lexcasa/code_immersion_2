@@ -1,0 +1,19 @@
+const A = {
+    nombre: "Alex",
+    apellido: "Casadevall"
+}
+const B = {...A}
+
+CICLO UPSERT
+    -> Update / Insert
+        -> Si el objeto tiene ID
+            -> Actualiza (update)
+        -> Si no tiene ID
+            -> Crea (insert)
+
+Operaciones CRUD: 
+
+    -> Create : POST
+    -> Read   : GET
+    -> Update : PUT
+    -> Delete : DELETE

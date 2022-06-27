@@ -36,8 +36,8 @@
                         <td>{{persona.nombre}}</td>
                         <td>{{persona.documento}}</td>
                         <td>
-                            <button class="btn btn-secondary">Seleccionar</button>
-                            <button class="btn btn-danger">Eliminar</button>
+                            <button class="btn btn-secondary" @click="seleccionarPersona(persona)">Seleccionar</button>
+                            <button class="btn btn-danger" @click="eliminarPersona(persona._id)">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>
